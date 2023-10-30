@@ -4,8 +4,8 @@ import pandas as pd
 class Delete_SO:
     global SO_ID 
     SO_ID = '3760130941'
-    conn = ("""driver={SQL Server};server=10.10.10.56;database=EMIZA-ARTSANA-TEST;
-        trusted_connection=no;UID=CCS02;PWD=Pass@1234;IntegratedSecurity = true;""")
+    conn = ("""driver={SQL Server};server={{Database port}};database={{Database Name}};
+        trusted_connection=no;UID={{Database User Name}};PWD={{Database Password}};IntegratedSecurity = true;""")
     conx = pyodbc.connect(conn)
     cur = conx.cursor()
 
